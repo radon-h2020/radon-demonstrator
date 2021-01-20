@@ -1,17 +1,9 @@
 'use strict';
 
-const uuid = require('uuid');
 const AWS = require('aws-sdk');
-// set region if not set (as not set by the SDK by default). required for offline usage
-if (!AWS.config.region) {
-    AWS.config.update({
-      region: 'us-east-1'
-    });
-}
 const dynamoDb = new AWS.DynamoDB();
 
-
-module.exports.update = (event, context, callback) => {
+module.exports.handler = (event, context, callback) => {
     const headers = {
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Credentials": "true",
@@ -22,11 +14,7 @@ module.exports.update = (event, context, callback) => {
 
     const todoItem = JSON.parse(event.body);
 
-    if (event.headers["x-api-key"] === undefined) {
-        return callback(null, { headers: headers, statusCode: 400, body: JSON.stringify("Missing or invalid x-api-key header.")});
-    } else if (event.headers["x-api-key"].length < 1) {
-        return callback(null, { headers: headers, statusCode: 400, body: JSON.stringify("Empty x-api-key header value.")});
-    } else if (event.pathParameters.id === undefined) {
+    if (event.pathParameters.id === undefined) {
         return callback(null, { headers: headers, statusCode: 400, body: JSON.stringify("Missing 'id' in URL path.")});
     }
 
@@ -38,13 +26,13 @@ module.exports.update = (event, context, callback) => {
         updateValues[":c"] = { BOOL: todoItem.completed };
         updateArray.push("#c = :c");
     }
-    if (todoItem.text !== undefined) {
-        updateNames["#t"] = "text";
-        updateValues[":t"] = { S: todoItem.text };
+    if (todoItem.todo !== undefined) {
+        updateNames["#t"] = "todo";
+        updateValues[":t"] = { S: todoItem.todo };
         updateArray.push("#t = :t");
     }
     if (updateArray.length == 0) {
-        return callback(null, { statusCode: 400, body: "No properties passed to update. Supports 'completed' and 'text'.", headers: { "Content-Type": "text/plain" } });
+        return callback(null, { statusCode: 400, body: "No properties passed to update. Supports 'completed' and 'todo'.", headers: { "Content-Type": "text/plain" } });
     }
     const timestamp = Math.floor(new Date() / 1000);
     updateNames["#u"] = "updated";
@@ -55,9 +43,6 @@ module.exports.update = (event, context, callback) => {
         ExpressionAttributeNames: updateNames,
         ExpressionAttributeValues: updateValues,
         Key: {
-            "user": {
-                S: event.headers["x-api-key"]
-            },
             "id": {
                 S: event.pathParameters.id
             }

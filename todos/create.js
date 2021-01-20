@@ -1,17 +1,9 @@
 'use strict';
 
-const uuid = require('uuid');
 const AWS = require('aws-sdk');
-// set region if not set (as not set by the SDK by default). required for offline usage
-if (!AWS.config.region) {
-    AWS.config.update({
-      region: 'us-east-1'
-    });
-}
 const dynamoDb = new AWS.DynamoDB.DocumentClient();
 
-
-module.exports.create = (event, context, callback) => {
+module.exports.handler = (event, context, callback) => {
     const headers = {
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Credentials": "true",
@@ -22,23 +14,18 @@ module.exports.create = (event, context, callback) => {
 
     const todoItem = JSON.parse(event.body);
 
-    if (event.headers["x-api-key"] === undefined) {
-        return callback(null, { statusCode: 400, body: JSON.stringify("Missing or invalid x-api-key header.") });
-    } else if (event.headers["x-api-key"].length < 1) {
-        return callback(null, { statusCode: 400, body: JSON.stringify("Empty x-api-key header value.") });
-    } else if (todoItem.text === undefined) {
-        return callback(null, { statusCode: 400, body: JSON.stringify("Missing or malformed 'text' property in JSON object in request body.") });
-    } else if (todoItem.text.length < 1) {
-        return callback(null, { statusCode: 400, body: JSON.stringify("Empty 'text' property in JSON object in request body.") });
+    if (todoItem.todo === undefined) {
+        return callback(null, { statusCode: 400, body: JSON.stringify("Missing or malformed 'todo' property in JSON object in request body.") });
+    } else if (todoItem.todo.length < 1) {
+        return callback(null, { statusCode: 400, body: JSON.stringify("Empty 'todo' property in JSON object in request body.") });
     }
 
     const timestamp = Math.floor(new Date() / 1000);
     const params = {
         TableName: process.env.TODOS_TABLE,
         Item: {
-            user: event.headers["x-api-key"],
-            id: uuid.v1(),
-            text: todoItem.text,
+            id: context.awsRequestId,
+            todo: todoItem.todo,
             completed: false,
             created: timestamp,
             updated: timestamp
