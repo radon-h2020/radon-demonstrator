@@ -10,7 +10,9 @@ production.
 
 Opera SaaS steps:
 
-- Access the UI : https://xopera-radon.xlab.si/ui/
+- Access the UI :
+  https://xopera-radon.xlab.si/ui/. You can login
+  using your radon credentials
 - Create a workspace
 - Create credentials
   - Name: whatever you want
