@@ -16,6 +16,8 @@ any software on their local system.
 > IDE can be found in the IDE
 > [ReadTheDocs webpage](https://radon-ide.readthedocs.io/en/latest/).
 
+## The IDE
+
 The RADON IDE will have all the tools needed to
 develop, model, orchestrate and deploy serverless
 functions, through its various components shown in
@@ -26,7 +28,9 @@ the picture below:
 In this workshop, we will try out a subsection of
 all the different tools available.
 
-## The IDE
+Everything in the IDE is a container in itself,
+making it easy to support the programming language
+of your choice.
 
 ### Tasks
 
@@ -48,7 +52,21 @@ mode):
 
 ![](img/IDE-layout.png)
 
-!!!XXX!!! HOW TO LOAD IN THE FUNCTIONS!
+Now you are ready to clone down the project code.
+
+- Click terminal and
+  `Open terminal in specific container` and clone
+  down this repository.
+- The project will be cloned in to a folder beside
+  the RADON folder, ready for developing.
+
+![](img/IDE-project-cloned.png)
+
+For the ease of the workshop, we have pre-packaged
+the functions needed in the next part. If you want
+to package the functions yourself, you can use
+[The functionhub provided](functionhub.md) with
+the framework as well.
 
 ## Graphical Modeling Tool
 
