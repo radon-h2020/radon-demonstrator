@@ -110,9 +110,30 @@ a model that looks similar to this one:
 ### Tasks
 
 - Open up GMT in the right hand side of the IDE
-- Create a new ![](img/GMT-add-model.png)
+- Create a new Service Template
+  ![](img/GMT-add-model.png)
+- Give it a name (eg. "serverless-todo") and click
+  add
+- Click on the Topology Template tab, and the open
+  editor button.
 
-- Model all the different nodes we need
+## Node Types
+
+All the necessary nodes can be found under the
+namespace “radon.nodes.aws” at the palette. The
+ServerlessToDoListAPI application consists of
+
+- 1 “AwsApiGateway”
+- 5 “AwsLambdaFunction”
+- 1 “AwsDynamoDBTable”
+- 1 “AwsPlatform”
+
+node types.
+
+### Tasks
+
+- Model all the different nodes we need by
+  dragging them into the canvas
 
 ## Node Properties
 
@@ -120,8 +141,138 @@ Having the nodes without specific properties will
 not help us much, so we need to input the right
 configuration for this to work. On the tab
 properties we populate the different properties.
-GMT provides a real time error detector to prevent
-the user from filing false entries.
+GMT provides a real time error detection to
+prevent the user from filing false entries.
+
+### Tasks
+
+- Populate all the nodes with the right
+  properties:
+
+<details>
+      <summary>AwsPlatform</summary>
+
+```
+displayName: "AwsPlatform"
+properties:
+  name: "AWS"
+  region: "eu-central-1"
+```
+
+</details>
+
+<details>
+      <summary>AwsAPIGateway</summary>
+
+```
+displayName: "AwsApiGateway"
+properties:
+  api_title: "ServerlessToDoListAPI"
+  api_version: "1.0.0"
+  api_description: "a simple serverless API example"
+```
+
+</details>
+
+<details>
+      <summary>AwsDynamoDBTable</summary>
+
+```
+displayName: "ItemsTable"
+properties:
+  hash_key_name: "id"
+  read_capacity: 1
+  write_capacity: 1
+  hash_key_type: "STRING"
+  table_name: "items"
+```
+
+</details>
+<details>
+      <summary>AwsLambdaFunction (get)</summary>
+
+```
+displayName: "GetTodoItem"
+properties:
+  handler: "get.handler"
+  memory: 128
+  name: "get-todo"
+  runtime: "nodejs12.x"
+  statement_id: "get-stmt"
+  zip_file: { get_artifact: [ SELF, get-item ] }
+  env_vars: {"TODOS_TABLE":"items"}
+```
+
+</details>
+<details>
+      <summary>AwsLambdaFunction (Create)</summary>
+
+```
+displayName: "CreateTodoItem"
+properties:
+  handler: "create.handler"
+  name: "create-item"
+  runtime: "nodejs12.x"
+  statement_id: "create-stmt"
+  zip_file: { get_artifact: [ SELF, create-item ] }
+  env_vars: {"TODOS_TABLE":"items"}
+```
+
+</details>
+<details>
+      <summary>AwsLambdaFunction (list)</summary>
+
+```
+  displayName: "ListTodos"
+      properties:
+        handler: "list.handler"
+        memory: 128
+        name: "list-todos"
+        runtime: "nodejs12.x"
+        alias: "dev"
+        statement_id: "list-statement"
+        zip_file: { get_artifact: [ SELF, list_function ] }
+        timeout: 300
+        env_vars: {"TODOS_TABLE":"items"}
+```
+
+</details>
+<details>
+      <summary>AwsLambdaFunction (update)</summary>
+
+```
+     displayName: "UpdateTodoItem"
+      properties:
+        handler: "update.handler"
+        memory: 128
+        name: "update-item"
+        runtime: "nodejs12.x"
+        alias: "dev"
+        statement_id: "update-stmt"
+        zip_file: { get_artifact: [ SELF, update-item ] }
+        timeout: 300
+        env_vars: {"TODOS_TABLE":"items"}
+```
+
+</details>
+<details>
+      <summary>AwsLambdaFunction (delete)</summary>
+
+```
+  displayName: "DeleteTodoItem"
+      properties:
+        handler: "delete.handler"
+        memory: 128
+        name: "delete-item"
+        runtime: "nodejs12.x"
+        alias: "dev"
+        statement_id: "delete-stmt"
+        zip_file: { get_artifact: [ SELF, delete-item ] }
+        timeout: 300
+        env_vars: {"TODOS_TABLE":"items"}
+```
+
+</details>
 
 ## Adding the code
 
