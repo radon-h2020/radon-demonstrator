@@ -105,7 +105,7 @@ In the picture below, you can see how
 After running the rest of this lab, you will have
 a model that looks similar to this one:
 
-![](img/GMT-full-model.png)
+![](img/application-GMT2.png)
 
 ### Tasks
 
@@ -274,16 +274,31 @@ properties:
 
 </details>
 
-## Adding the code
+## Attaching the code
 
-- !!!XXX!!! "add artifact" with URL from
-  Cloudstash
+All the function nodes needs code attached to be
+usefull. On the tab “Artifacts”, the artifacts
+that accompany the lambda function can be attached
+either by uploading a file or by referencing a URL
+from [FunctionHub](functionhub.md).
+
 - Under properties, write the ID of the artifact
   that you pointed towards
 
+* Delete
+  `http://cloudstash.io/artifact_download/07714624b3dd0c78502024164411a7`
+* List:
+  `http://cloudstash.io/artifact_download/9f9fd845ed2f3b061136179467ba5f`
+* Update:
+  `http://cloudstash.io/artifact_download/0b2516f89dbd44dc1bd03712e81db7`
+* Get:
+  `http://cloudstash.io/artifact_download/1cea0130441318a22cee6904ea971a`
+* Create:
+  `http://cloudstash.io/artifact_download/36f24b63abeb3a7f70a1f1ca42077e`
+
 ## Node relationships
 
-All nodes have some capabilites they offer and
+All nodes have some capabilities they offer and
 some requirements they need from others.
 
 As an example the requirement of the
@@ -297,9 +312,79 @@ In the end
 
 ### Tasks
 
-The requirement of the AwsLambdaFunction node
-“HostedOn” has to be matched with the capability
-of AwsPlatform node “Host”. The requirement of the
-AwsLambdaFunction node “ConnectsTo” has to be
-matched with the capability of the DynamoDBTable
-node “Database”.
+- For all nodes besides `AwsPlatform`, they should
+  have a requirement relationship from their
+  `HostedOn` to the formers `Host` capability.
+- For all Lambda functions, the requirement of
+  `ConnectsTo` has to be matched with the
+  capability of the DynamoDBTable node `Database`.
+- `AwsApiGateway` needs to have a requirement
+  relationship of `ApiGatewayTrigger` to all
+  lambda functions.
+  - For all of the five relationships, some
+    properties needs to be attached, listed below:
+
+ <details>
+      <summary>Get</summary>
+
+```
+properties:
+  endpoint: "/todos/{id}"
+  http_methods: "get"
+```
+
+</details>
+<details>
+      <summary>Put</summary>
+
+```
+properties:
+  endpoint: "/todos/{id}"
+  http_methods: "post"
+```
+
+</details>
+<details>
+      <summary>List</summary>
+
+```
+properties:
+  endpoint: "/todos"
+  http_methods: "get"
+```
+
+</details>
+<details>
+      <summary>Update</summary>
+
+```
+properties:
+  endpoint: "/todos/{id}"
+  http_methods: "put"
+```
+
+</details>
+<details>
+      <summary>Delete</summary>
+
+```
+properties:
+  endpoint: "/todos/{id}"
+  http_methods: "delete"
+```
+
+</details>
+
+## Finishing up
+
+At the end of this, you should have a project
+looking something like this:
+
+![](img/application-GMT2.png)
+
+## If something fails
+
+If you got stuck, the example application has
+already been modelled in the service templates
+section called
+`ServerlessToDoListAPITestingExample`.
