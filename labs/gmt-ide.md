@@ -102,6 +102,13 @@ properties we populate the different properties.
 GMT provides a real time error detector to prevent
 the user from filing false entries.
 
+## Adding the code
+
+- !!!XXX!!! "add artifact" with URL from
+  Cloudstash
+- Under properties, write the ID of the artifact
+  that you pointed towards
+
 ## Node relationships
 
 All nodes have some capabilites they offer and

@@ -44,3 +44,12 @@ provides a web-based development environment that
 supports multi-user usage and acts as the host
 environment for the RADON framework by enabling
 the interaction with the RADON tools.
+
+## First step
+
+Now you are ready to go in and try the RADON
+framework out.
+
+Head over to
+[The IDE and graphical modelling tool section](gmt-ide.md)
+to begin
