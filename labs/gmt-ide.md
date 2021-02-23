@@ -375,6 +375,8 @@ properties:
 
 </details>
 
+- When done, click save, and your model is done
+
 ## Finishing up
 
 At the end of this, you should have a project

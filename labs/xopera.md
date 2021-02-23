@@ -1,5 +1,11 @@
 # Deploy your functions
 
+!!!TODO!!!
+
+- export the model from GMT
+- use either CLI or SaaS solution
+- test it out.
+
 The orchestrator puts the application into the
 runtime environment, enforcing the state described
 by application blueprint (CSAR) onto the targeted
