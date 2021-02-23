@@ -121,19 +121,18 @@ a model that looks similar to this one:
 
 All the necessary nodes can be found under the
 namespace “radon.nodes.aws” at the palette. The
-ServerlessToDoListAPI application consists of
+ServerlessToDoListAPI application consists of the
+following node types:
 
-- 1 “AwsApiGateway”
-- 5 “AwsLambdaFunction”
-- 1 “AwsDynamoDBTable”
-- 1 “AwsPlatform”
-
-node types.
+- 1 AwsApiGateway
+- 5 AwsLambdaFunction
+- 1 AwsDynamoDBTable
+- 1 AwsPlatform
 
 ### Tasks
 
 - Model all the different nodes we need by
-  dragging them into the canvas
+  dragging them into the canvas from the left pane
 
 ## Node Properties
 
@@ -146,8 +145,7 @@ prevent the user from filing false entries.
 
 ### Tasks
 
-- Populate all the nodes with the right
-  properties:
+Populate all the nodes with the right properties:
 
 <details>
       <summary>AwsPlatform</summary>
@@ -282,19 +280,26 @@ that accompany the lambda function can be attached
 either by uploading a file or by referencing a URL
 from [FunctionHub](functionhub.md).
 
-- Under properties, write the ID of the artifact
-  that you pointed towards
+### Tasks
 
-* Delete
-  `http://cloudstash.io/artifact_download/07714624b3dd0c78502024164411a7`
-* List:
-  `http://cloudstash.io/artifact_download/9f9fd845ed2f3b061136179467ba5f`
-* Update:
-  `http://cloudstash.io/artifact_download/0b2516f89dbd44dc1bd03712e81db7`
-* Get:
-  `http://cloudstash.io/artifact_download/1cea0130441318a22cee6904ea971a`
-* Create:
-  `http://cloudstash.io/artifact_download/36f24b63abeb3a7f70a1f1ca42077e`
+- Select the `artifacts` view for the canvas.
+- On each Lambda node, attach an artifact of the
+  type `zip` with the following url for each
+
+  - Delete
+    `http://cloudstash.io/artifact_download/07714624b3dd0c78502024164411a7`
+  - List:
+    `http://cloudstash.io/artifact_download/9f9fd845ed2f3b061136179467ba5f`
+  - Update:
+    `http://cloudstash.io/artifact_download/0b2516f89dbd44dc1bd03712e81db7`
+  - Get:
+    `http://cloudstash.io/artifact_download/1cea0130441318a22cee6904ea971a`
+  - Create:
+    `http://cloudstash.io/artifact_download/36f24b63abeb3a7f70a1f1ca42077e`
+
+- Under properties for each node, write the ID of
+  the artifact that you pointed towards in the
+  `zipe_file` field
 
 ## Node relationships
 
