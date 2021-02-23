@@ -23,6 +23,9 @@ the picture below:
 
 ![Picture of the different components that the RADON IDE consists of](img/IDE-concept.png)
 
+In this workshop, we will try out a subsection of
+all the different tools available.
+
 ## The IDE
 
 ### Tasks
@@ -32,7 +35,7 @@ the picture below:
 - In the dashboard select `Get Started` tab and
   then `Custom Workspace`.
 - Copy the URL of the
-  [RADON Devfile available here](https://raw.githubusercontent.com/radon-h2020/radon-ide/master/devfiles/radon/v0.0.3/devfile.yaml)
+  [RADON Devfile available here](https://raw.githubusercontent.com/radon-h2020/radon-ide/master/devfiles/radon/v0.0.4/devfile.yaml)
   and paste it in the field URL of devfile under
   Devfile section.
 - Then click on `Load devfile`
