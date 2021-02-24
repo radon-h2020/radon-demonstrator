@@ -193,11 +193,10 @@ properties:
 displayName: "GetTodoItem"
 properties:
   handler: "get.handler"
-  memory: 128
   name: "get-todo"
-  runtime: "nodejs12.x"
+  runtime: "nodejs10.x"
   statement_id: "get-stmt"
-  zip_file: { get_artifact: [ SELF, get-item ] }
+  zip_file: "1cea0130441318a22cee6904ea971a"
   env_vars: {"TODOS_TABLE":"items"}
 ```
 
@@ -210,9 +209,9 @@ displayName: "CreateTodoItem"
 properties:
   handler: "create.handler"
   name: "create-item"
-  runtime: "nodejs12.x"
+  runtime: "nodejs10.x"
   statement_id: "create-stmt"
-  zip_file: { get_artifact: [ SELF, create-item ] }
+  zip_file: "36f24b63abeb3a7f70a1f1ca42077e"
   env_vars: {"TODOS_TABLE":"items"}
 ```
 
@@ -224,13 +223,10 @@ properties:
   displayName: "ListTodos"
       properties:
         handler: "list.handler"
-        memory: 128
         name: "list-todos"
-        runtime: "nodejs12.x"
-        alias: "dev"
+        runtime: "nodejs10.x"
         statement_id: "list-statement"
-        zip_file: { get_artifact: [ SELF, list_function ] }
-        timeout: 300
+        zip_file: "9f9fd845ed2f3b061136179467ba5f"
         env_vars: {"TODOS_TABLE":"items"}
 ```
 
@@ -242,13 +238,10 @@ properties:
      displayName: "UpdateTodoItem"
       properties:
         handler: "update.handler"
-        memory: 128
         name: "update-item"
-        runtime: "nodejs12.x"
-        alias: "dev"
+        runtime: "nodejs10.x"
         statement_id: "update-stmt"
-        zip_file: { get_artifact: [ SELF, update-item ] }
-        timeout: 300
+        zip_file: "0b2516f89dbd44dc1bd03712e81db7"
         env_vars: {"TODOS_TABLE":"items"}
 ```
 
@@ -260,13 +253,10 @@ properties:
   displayName: "DeleteTodoItem"
       properties:
         handler: "delete.handler"
-        memory: 128
         name: "delete-item"
-        runtime: "nodejs12.x"
-        alias: "dev"
+        runtime: "nodejs10.x"
         statement_id: "delete-stmt"
-        zip_file: { get_artifact: [ SELF, delete-item ] }
-        timeout: 300
+        zip_file: "07714624b3dd0c78502024164411a7"
         env_vars: {"TODOS_TABLE":"items"}
 ```
 
