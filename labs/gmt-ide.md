@@ -334,7 +334,7 @@ properties:
 
 ```
 properties:
-  endpoint: "/todos/{id}"
+  endpoint: "/todos"
   http_methods: "post"
 ```
 
