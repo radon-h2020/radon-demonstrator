@@ -35,7 +35,7 @@ of your choice.
 ### Tasks
 
 - Login to the environment through the
-  [Website](http://che-che.217.172.12.178.nip.io/)
+  [Website](http://che-che.51.11.43.6.nip.io/)
 - In the dashboard select `Get Started` tab and
   then `Custom Workspace`.
 - Copy the URL of the
@@ -64,9 +64,9 @@ Now you are ready to clone down the project code.
 
 For the ease of the workshop, we have pre-packaged
 the functions needed in the next part. If you want
-to package the functions yourself, you can use
-[The functionhub provided](functionhub.md) with
-the framework as well.
+to package and upload the functions yourself, you
+can use [The functionhub provided](functionhub.md)
+with the framework as well.
 
 ## Graphical Modeling Tool
 

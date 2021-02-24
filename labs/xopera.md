@@ -1,18 +1,34 @@
 # Deploy your functions
 
-!!!TODO!!!
+We have now successfully made a deployable model,
+only thing we need now is to deploy it.
+
+RADON comes with its own deployment tool called
+xOpera.
+
+## Export the model from GMT
 
 - export the model from GMT
-- use either CLI or SaaS solution
-- test it out.
 
-The orchestrator puts the application into the
-runtime environment, enforcing the state described
-by application blueprint (CSAR) onto the targeted
-provider(s). The common operations are deployment
-and un-deploy and are executed on different target
-environments such as staging, development and
-production.
+### Tasks
+
+- open GMT (link in the right side of the IDE)
+- Locate your model in the service templates,
+  click on the template.
+- Click `export` and `export to ide`
+- Go back to the IDE and check that a new root
+  folder called `radon-csars` has been created.
+- Open the folder and check that you have a file
+  called the same as your service template and
+  with the `.csars` extension.
+
+You are now ready to either use the
+[CLI version](#cli-version) of the deployment
+tool, or the [SaaS offering](#saas-version).
+
+## CLI version
+
+## SaaS version
 
 Opera SaaS steps:
 
@@ -54,3 +70,15 @@ aws_secret_access_key = <secret>
   to the apilink/todos with the following payload
   to tests the functionality of the application: {
   "todo": "Have a another coffee :-)" }
+
+## Test out the serverless application
+
+- test it out.
+
+The orchestrator puts the application into the
+runtime environment, enforcing the state described
+by application blueprint (CSAR) onto the targeted
+provider(s). The common operations are deployment
+and un-deploy and are executed on different target
+environments such as staging, development and
+production.

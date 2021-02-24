@@ -16,7 +16,7 @@ following prerequisites:
   [Eclipse Che environment](https://mailchi.mp/fe5357445dba/radon-ide-access-request/).
   NB! this is not done automatic, so sign up time
   can vary.
-- A user on [cloudstash](cloudstash.io)
+- (Optional) A user on [cloudstash](cloudstash.io)
 
 ## workshop labs
 
