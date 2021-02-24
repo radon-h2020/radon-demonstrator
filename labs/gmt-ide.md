@@ -330,7 +330,7 @@ properties:
 
 </details>
 <details>
-      <summary>Put</summary>
+      <summary>Create</summary>
 
 ```
 properties:
