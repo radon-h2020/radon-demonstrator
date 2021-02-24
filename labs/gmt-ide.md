@@ -314,8 +314,8 @@ In the end
   `ConnectsTo` has to be matched with the
   capability of the DynamoDBTable node `Database`.
 - `AwsApiGateway` needs to have a requirement
-  relationship of `ApiGatewayTrigger` to all
-  lambda functions.
+  relationship of `Invoker` to all lambda
+  functions capability `Invokable`.
   - For all of the five relationships, some
     properties needs to be attached, listed below:
 
