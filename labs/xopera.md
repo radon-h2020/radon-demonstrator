@@ -6,9 +6,8 @@ only thing we need now is to deploy it.
 RADON comes with its own deployment tool called
 xOpera.
 
-## Export the model from GMT
-
-- export the model from GMT
+The first thing needed is to export the model from
+GMT into the IDE.
 
 ### Tasks
 
@@ -28,7 +27,33 @@ tool, or the [SaaS offering](#saas-version).
 
 ## CLI version
 
+[xOpera](https://github.com/xlab-si/xopera-opera)
+aims to be a lightweight orchestrator compliant
+with OASIS TOSCA model used in RADON.
+
+The orchestrator puts the application into the
+runtime environment, enforcing the state described
+by application blueprint (CSAR file downloaded)
+onto AWS. The common operations are deployment and
+un-deploy and are executed on different target
+environments such as staging, development and
+production.
+
+The CLI can be
+
+### Tasks
+
+- Download the csar file from IDE, by clicking
+- install opera through pip, or use
+- opera deploy
+
+Head on to
+[test the deployment](#Test-out-the-serverless-application)
+
 ## SaaS version
+
+> NOTE: this is under heavy development, so the
+> guide might not work with the latest version.
 
 Opera SaaS steps:
 
@@ -74,11 +99,3 @@ aws_secret_access_key = <secret>
 ## Test out the serverless application
 
 - test it out.
-
-The orchestrator puts the application into the
-runtime environment, enforcing the state described
-by application blueprint (CSAR) onto the targeted
-provider(s). The common operations are deployment
-and un-deploy and are executed on different target
-environments such as staging, development and
-production.
