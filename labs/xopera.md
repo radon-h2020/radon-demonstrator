@@ -43,12 +43,126 @@ The CLI can be
 
 ### Tasks
 
-- Download the csar file from IDE, by clicking
-- install opera through pip, or use
-- opera deploy
+> Note: In order for this to work, you need to
+> have set your AWS credentials as environment
+> variables. For more info look at the
+> [env variables](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html)
+> needed, and
+> [how to create IAM credentials](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-admin-group.html)
 
-Head on to
+- Download the `.csar` file from IDE, by clicking
+  on the file in the IDE, and choose `download`
+- install opera through pip, or use the docker
+  image in this repository.
+
+<details>
+      <summary>pip</summary>
+
+Look at the installation guide on the
+[GH webpage](https://github.com/xlab-si/xopera-opera#prerequisites)
+
+```bash
+mkdir ~/opera && cd ~/opera
+python3 -m venv .venv && . .venv/bin/activate
+pip install opera boto3
+```
+
+Run the following command in the folder where you
+have the `csar` file stored (here called
+`todo.csar`)
+
+```bash
+opera deploy -c todo.csar
+```
+
+After executing the opera, you should see
+something like this printed out.
+
+```bash
+[Worker_0]   Deploying AwsPlatform_0_0
+[Worker_0]     Executing configure on AwsPlatform_0_0
+[Worker_0]   Deployment of AwsPlatform_0_0 complete
+[Worker_0]   Deploying AwsDynamoDBTable_0_0
+[Worker_0]     Executing create on AwsDynamoDBTable_0_0
+[Worker_0]   Deployment of AwsDynamoDBTable_0_0 complete
+[Worker_0]   Deploying AwsLambdaFunction_1_0
+[Worker_0]     Executing create on AwsLambdaFunction_1_0
+[Worker_0]   Deployment of AwsLambdaFunction_1_0 complete
+[Worker_0]   Deploying AwsLambdaFunction_2_0
+[Worker_0]     Executing create on AwsLambdaFunction_2_0
+[Worker_0]   Deployment of AwsLambdaFunction_2_0 complete
+[Worker_0]   Deploying AwsLambdaFunction_0_0
+[Worker_0]     Executing create on AwsLambdaFunction_0_0
+[Worker_0]   Deployment of AwsLambdaFunction_0_0 complete
+[Worker_0]   Deploying AwsLambdaFunction_3_0
+[Worker_0]     Executing create on AwsLambdaFunction_3_0
+[Worker_0]   Deployment of AwsLambdaFunction_3_0 complete
+[Worker_0]   Deploying AwsLambdaFunction_4_0
+[Worker_0]     Executing create on AwsLambdaFunction_4_0
+[Worker_0]   Deployment of AwsLambdaFunction_4_0 complete
+[Worker_0]   Deploying AwsApiGateway_0_0
+[Worker_0]     Executing create on AwsApiGateway_0_0
+[Worker_0]     Executing pre_configure_source on AwsApiGateway_0_0--AwsLambdaFunction_0_0
+[Worker_0]     Executing pre_configure_source on AwsApiGateway_0_0--AwsLambdaFunction_1_0
+[Worker_0]     Executing pre_configure_source on AwsApiGateway_0_0--AwsLambdaFunction_2_0
+[Worker_0]     Executing pre_configure_source on AwsApiGateway_0_0--AwsLambdaFunction_3_0
+[Worker_0]     Executing pre_configure_source on AwsApiGateway_0_0--AwsLambdaFunction_4_0
+[Worker_0]     Executing configure on AwsApiGateway_0_0
+[Worker_0]   Deployment of AwsApiGateway_0_0 complete
+
+```
+
+</details>
+
+<details>
+      <summary>docker</summary>
+
+Run the following command in the folder where you
+have the `csar` file stored (here called
+`todo.csar`)
+
+```bash
+docker run -it -v $PWD:/tmp/opera --env-file env.list praqma/operacli opera deploy -c todo.csar
+```
+
+```bash
+[Worker_0]   Deploying AwsPlatform_0_0
+[Worker_0]     Executing configure on AwsPlatform_0_0
+[Worker_0]   Deployment of AwsPlatform_0_0 complete
+[Worker_0]   Deploying AwsDynamoDBTable_0_0
+[Worker_0]     Executing create on AwsDynamoDBTable_0_0
+[Worker_0]   Deployment of AwsDynamoDBTable_0_0 complete
+[Worker_0]   Deploying AwsLambdaFunction_1_0
+[Worker_0]     Executing create on AwsLambdaFunction_1_0
+[Worker_0]   Deployment of AwsLambdaFunction_1_0 complete
+[Worker_0]   Deploying AwsLambdaFunction_2_0
+[Worker_0]     Executing create on AwsLambdaFunction_2_0
+[Worker_0]   Deployment of AwsLambdaFunction_2_0 complete
+[Worker_0]   Deploying AwsLambdaFunction_0_0
+[Worker_0]     Executing create on AwsLambdaFunction_0_0
+[Worker_0]   Deployment of AwsLambdaFunction_0_0 complete
+[Worker_0]   Deploying AwsLambdaFunction_3_0
+[Worker_0]     Executing create on AwsLambdaFunction_3_0
+[Worker_0]   Deployment of AwsLambdaFunction_3_0 complete
+[Worker_0]   Deploying AwsLambdaFunction_4_0
+[Worker_0]     Executing create on AwsLambdaFunction_4_0
+[Worker_0]   Deployment of AwsLambdaFunction_4_0 complete
+[Worker_0]   Deploying AwsApiGateway_0_0
+[Worker_0]     Executing create on AwsApiGateway_0_0
+[Worker_0]     Executing pre_configure_source on AwsApiGateway_0_0--AwsLambdaFunction_0_0
+[Worker_0]     Executing pre_configure_source on AwsApiGateway_0_0--AwsLambdaFunction_1_0
+[Worker_0]     Executing pre_configure_source on AwsApiGateway_0_0--AwsLambdaFunction_2_0
+[Worker_0]     Executing pre_configure_source on AwsApiGateway_0_0--AwsLambdaFunction_3_0
+[Worker_0]     Executing pre_configure_source on AwsApiGateway_0_0--AwsLambdaFunction_4_0
+[Worker_0]     Executing configure on AwsApiGateway_0_0
+[Worker_0]   Deployment of AwsApiGateway_0_0 complete
+```
+
+</details>
+
+After successfully deployed the model, head on to
 [test the deployment](#Test-out-the-serverless-application)
+in the section below.
 
 ## SaaS version
 

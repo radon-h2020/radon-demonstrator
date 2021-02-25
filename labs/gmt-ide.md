@@ -42,6 +42,7 @@ of your choice.
   [RADON Devfile available here](https://raw.githubusercontent.com/radon-h2020/radon-ide/master/devfiles/radon/v0.0.4/devfile.yaml)
   and paste it in the field URL of devfile under
   Devfile section.
+- Set the Storage Type to `ephemeral`
 - Then click on `Load devfile`
 - once the RADON devfile has been loaded click on
   the `Create & Open button`
