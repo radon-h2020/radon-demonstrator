@@ -260,3 +260,10 @@ Click on the tool of choice below.
   that the item has been persisted.
 
 </details>
+
+## Clean up
+
+When you are finished playing around, you can use
+opera to undeploy. To undeploy use
+`opera undeploy` and watch the logs to make sure
+that all gets deleted.
