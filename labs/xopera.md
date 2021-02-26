@@ -212,4 +212,51 @@ aws_secret_access_key = <secret>
 
 ## Test out the serverless application
 
-- test it out.
+Now comes the time to test out the serverless
+application.
+
+You can either do it with the AWS UI, or with
+postman(or curl if you dare).
+
+Click on the tool of choice below.
+
+### Tasks
+
+<details>
+      <summary>AWS UI</summary>
+
+- Log into AWS account
+- Go into `Amazon API Gateway` and select
+  `ServerlessToDoListAPI`
+- ![](img/AWSAPI.png)
+- Click on the /todos `GET` method, and `test` and
+  see that the result you get back in the response
+  body is an empty list; `[]`
+- To populate with a todo, Click on the /todos
+  `POST` method, and `test`
+- In the resquest body, paste in the payload:
+  `{"todo":"buy milk"}` and click `test`
+- Get back to test the /todos `GET` method to see
+  that the item has been persisted.
+
+</details>
+<details>
+      <summary>Postman</summary>
+
+- Log into AWS account
+- Go into `Amazon API Gateway` and select
+  `ServerlessToDoListAPI`
+- To get the URL to test, click on `Stages`
+  `production` and take the `invoke URL:`
+- ![](img/AWSURL.png)
+- Open Postman
+- Send a `get` message to `<invokeURL>/todos` and
+  see that the result you get back in the response
+  body is an empty list; `[]`
+- To populate with a todo, send a `POST` method to
+  `<invokeURL>/posts` with a resquest body like
+  `{"todo":"buy milk"}`
+- Get back to test the /todos `GET` method to see
+  that the item has been persisted.
+
+</details>
