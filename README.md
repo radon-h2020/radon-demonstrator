@@ -21,10 +21,9 @@ following prerequisites:
 ## workshop labs
 
 1. [Introduction to the application and RADON](labs/introduction.md)
-1. [Deploying artifacts to FunctionHub](labs/functionhub.md)
+1. (OPTIONAL/WIP)[Deploying artifacts to FunctionHub](labs/functionhub.md)
 1. [Working with GMT and the IDE](labs/gmt-ide.md)
 1. [Deploying functions through xOpera](labs/xopera.md)
-1. []()
 
 ## Directory
 

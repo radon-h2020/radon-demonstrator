@@ -388,3 +388,8 @@ If you got stuck, the example application has
 already been modelled in the service templates
 section called
 `ServerlessToDoListAPITestingExample`.
+
+## Next step
+
+Head over to [xopera](xopera.md) section to deploy
+your model.
