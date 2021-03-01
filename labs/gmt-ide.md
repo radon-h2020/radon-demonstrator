@@ -8,10 +8,6 @@ development environment (IDE) used by developers
 to create applications without the need to install
 any software on their local system.
 
-> In order to get access to the RADON IDE, the
-> user has to make a RADON Access Request using
-> the form provided under “TEST RADON” available
-> at the [RADON website](https://radon-h2020.eu/).
 > A more comprehensive documentation on the RADON
 > IDE can be found in the IDE
 > [ReadTheDocs webpage](https://radon-ide.readthedocs.io/en/latest/).
