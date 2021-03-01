@@ -13,9 +13,7 @@ following prerequisites:
 
 - An AWS account to deploy the application to.
 - A user on the
-  [Eclipse Che environment](https://mailchi.mp/fe5357445dba/radon-ide-access-request/).
-  NB! this is not done automatic, so sign up time
-  can vary.
+  [Eclipse Che environment](http://che-che.51.11.43.6.nip.io/).
 - (Optional) A user on [cloudstash](cloudstash.io)
 
 ## workshop labs
