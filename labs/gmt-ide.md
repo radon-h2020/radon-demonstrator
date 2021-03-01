@@ -180,9 +180,7 @@ properties:
   read_capacity: 1
   write_capacity: 1
   hash_key_type: "STRING"
-  table_name: "items"
   name: "items"
-  port: 12345
 ```
 
 </details>
