@@ -52,8 +52,9 @@ mode):
 Now you are ready to clone down the project code.
 
 - Click terminal and
-  `Open terminal in specific container` and clone
-  down this repository.
+  `Open terminal in specific container` use the
+  theia tooling container and clone down this
+  repository.
 - The project will be cloned in to a folder beside
   the RADON folder, ready for developing.
 
