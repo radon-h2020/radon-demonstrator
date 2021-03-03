@@ -117,6 +117,15 @@ something like this printed out.
 <details>
       <summary>docker</summary>
 
+In the same folder where you have the `csar` file,
+create a file called `env.list` with your AWS
+credentials like this:
+
+```env
+AWS_ACCESS_KEY_ID=KEY_ID_HERE
+AWS_SECRET_ACCESS_KEY=ACCESS_KEY_HERE
+```
+
 Run the following command in the folder where you
 have the `csar` file stored (here called
 `todo.csar`)

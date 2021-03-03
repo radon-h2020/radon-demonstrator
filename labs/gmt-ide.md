@@ -117,8 +117,8 @@ a model that looks similar to this one:
   ![](img/GMT-add-model.png)
 - Give it a name (eg. "serverless-todo") and click
   add
-- Click on the Topology Template tab, and the open
-  editor button.
+- Click on the Topology Template tab, and click
+  the `open editor` button.
 
 ## Node Types
 
@@ -223,7 +223,7 @@ properties:
       <summary>AwsLambdaFunction (list)</summary>
 
 ```
-  displayName: "ListTodos"
+  displayName: "ListTodoItem"
       properties:
         handler: "list.handler"
         name: "list-todos"
@@ -279,20 +279,20 @@ from [FunctionHub](functionhub.md).
 - On each Lambda node, attach an artifact of the
   type `zip` with the following url for each
 
-  - Delete
-    `http://cloudstash.io/artifact_download/07714624b3dd0c78502024164411a7`
-  - List:
-    `http://cloudstash.io/artifact_download/9f9fd845ed2f3b061136179467ba5f`
-  - Update:
-    `http://cloudstash.io/artifact_download/0b2516f89dbd44dc1bd03712e81db7`
   - Get:
     `http://cloudstash.io/artifact_download/1cea0130441318a22cee6904ea971a`
   - Create:
     `http://cloudstash.io/artifact_download/36f24b63abeb3a7f70a1f1ca42077e`
+  - List:
+    `http://cloudstash.io/artifact_download/9f9fd845ed2f3b061136179467ba5f`
+  - Update:
+    `http://cloudstash.io/artifact_download/0b2516f89dbd44dc1bd03712e81db7`
+  - Delete
+    `http://cloudstash.io/artifact_download/07714624b3dd0c78502024164411a7`
 
-- Under properties for each node, write the ID of
-  the artifact that you pointed towards in the
-  `zipe_file` field
+- Under properties for each node, make sure that
+  the value corresponds with the value after
+  `/artifact_download` in the url above
 
 ## Node relationships
 
