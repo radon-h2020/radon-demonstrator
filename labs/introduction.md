@@ -34,11 +34,6 @@ components:
 
 ## RADON introduction
 
-XXX Radon is many things, focus first is the tools
-that help you develop, and deploy to cloud.
-
-The
-
 The RADON IDE (Integrated Development Environment)
 provides a web-based development environment that
 supports multi-user usage and acts as the host

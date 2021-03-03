@@ -54,9 +54,14 @@ Now you are ready to clone down the project code.
 - Click terminal and
   `Open terminal in specific container` use the
   theia tooling container and clone down this
-  repository.
+  repository with the command
+  `git clone https://github.com/radon-h2020/RADON-workshop.git`
 - The project will be cloned in to a folder beside
   the RADON folder, ready for developing.
+
+> Note: in the workshop, we will not be changing
+> the content of the repository, but only try to
+> model and deploy due to time constraint.
 
 ![](img/IDE-project-cloned.png)
 
