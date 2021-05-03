@@ -45,6 +45,4 @@ the interaction with the RADON tools.
 Now you are ready to go in and try the RADON
 framework out.
 
-Head over to
-[The IDE and graphical modelling tool section](ide.md)
-to begin
+Head over to the [IDE](ide.md) section to familiarize with the developing environment and begin the tutorial.
