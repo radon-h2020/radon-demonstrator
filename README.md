@@ -5,6 +5,7 @@
 This repository contains workshop labs and best
 practices for tools in the RADON framework
 toolstack.
+It is recommended for new users of the RADON framework to follow the **labs 1-4 as a basic training**. For more advanced usage follow the labs 5-13 according to interest. 
 
 ## Prerequisites
 
@@ -14,7 +15,6 @@ following prerequisites:
 - An AWS account to deploy the application to.
 - A user on the
   [Eclipse Che environment](http://che-che.51.11.43.6.nip.io/).
-- (Optional) A user on [cloudstash](cloudstash.io)
 
 ## Workshop labs
 
