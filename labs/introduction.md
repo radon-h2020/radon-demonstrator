@@ -46,5 +46,5 @@ Now you are ready to go in and try the RADON
 framework out.
 
 Head over to
-[The IDE and graphical modelling tool section](gmt-ide.md)
+[The IDE and graphical modelling tool section](ide.md)
 to begin
