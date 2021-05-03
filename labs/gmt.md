@@ -319,5 +319,5 @@ section called
 
 ## Next step
 
-Head over to [xopera](xopera.md) section to deploy
+Head over to [xOpera](xopera.md) section to deploy
 your model.

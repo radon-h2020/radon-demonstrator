@@ -16,12 +16,22 @@ following prerequisites:
   [Eclipse Che environment](http://che-che.51.11.43.6.nip.io/).
 - (Optional) A user on [cloudstash](cloudstash.io)
 
-## workshop labs
+## Workshop labs
 
 1. [Introduction to the application and RADON](labs/introduction.md)
-1. (OPTIONAL/WIP)[Deploying artifacts to FunctionHub](labs/functionhub.md)
-1. [Working with GMT and the IDE](labs/gmt-ide.md)
-1. [Deploying functions through xOpera](labs/xopera.md)
+2. [Working with the IDE](labs/ide.md)
+3. [Modeling the application with GMT](labs/gmt.md)
+4. [Deploying the csar with xOpera](labs/xopera.md)
+5. [Adding testing annotations with CTT](labs/ctt.md)
+6. [Adding Data pipelines](labs/datapipelines.md)
+7. [Adding monitoring with Prometheus & Grafana](labs/monitoring.md)
+8. [Adding verification constraints with VT](labs/vt.md)
+9. [Detect code defects with DPT](labs/dpt.md)
+10. [Choose optimal decomposition with DT](labs/dt.md)
+11. [Storing deployment templates in Template Library](labs/templatelibrary.md)
+12. [Enabling CI/CD](labs/cicd.md)
+13. [Deploying artifacts to FunctionHub](labs/functionhub.md)
+
 
 ## Directory
 
