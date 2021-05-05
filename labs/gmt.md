@@ -195,8 +195,8 @@ properties:
 
 ## Attaching the code
 
-All the function nodes needs code attached to be
-usefull. On the tab “Artifacts”, the artifacts
+All the function nodes require source code attached to be
+useful. On the tab “Artifacts”, the artifacts
 that accompany the lambda function can be attached
 either by uploading a file or by referencing a URL
 from [FunctionHub](functionhub.md).

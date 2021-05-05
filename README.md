@@ -20,17 +20,21 @@ following prerequisites:
 
 1. [Introduction to the application and RADON](labs/introduction.md)
 2. [Working with the IDE](labs/ide.md)
-3. [Modeling the application with GMT](labs/gmt.md)
-4. [Deploying the csar with xOpera](labs/xopera.md)
-5. [Adding testing annotations with CTT](labs/ctt.md)
-6. [Adding Data pipelines](labs/datapipelines.md)
-7. [Adding monitoring with Prometheus & Grafana](labs/monitoring.md)
-8. [Adding verification constraints with VT](labs/vt.md)
-9. [Detect code defects with DPT](labs/dpt.md)
-10. [Choose optimal decomposition with DT](labs/dt.md)
-11. [Storing deployment templates in Template Library](labs/templatelibrary.md)
-12. [Enabling CI/CD](labs/cicd.md)
-13. [Deploying artifacts to FunctionHub](labs/functionhub.md)
+3. [Moving source code to FunctionHub](labs/functionhub.md)
+4. [Modeling the application with GMT](labs/gmt.md)
+5. [Deploying the csar with xOpera](labs/xopera.md)
+6. [Adding testing annotations with CTT](labs/ctt.md)
+7. [Adding Data pipelines](labs/datapipelines.md)
+8. [Adding monitoring with Prometheus & Grafana](labs/monitoring.md)
+9. [Adding verification constraints with VT](labs/vt.md)
+10. [Detect code defects with DPT](labs/dpt.md)
+11. [Choose optimal decomposition with DT](labs/dt.md)
+12. [Storing deployment templates in Template Library](labs/templatelibrary.md)
+13. [Enabling CI/CD](labs/cicd.md)
+
+## RADON workflow
+
+<img src="labs/img/RADON-workflow.png" height="1000">
 
 
 ## Directory
