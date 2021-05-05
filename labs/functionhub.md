@@ -10,8 +10,8 @@ All the functions handling the back-end of the "SeverlessToDoListAPI" applicatio
 FunctionHub will provide access to them by a URL that we can later attach as a reference to the lambda’s “artifacts” property in GMT.
 
   
-
-==If you wish to **skip this step** there is a public FunctionHub repository available with 5 necessary functions. The repository can be found in Cloudstash.io under the name “ServerlessToDoListApi-repo”).==
+#### _Note_
+_If you wish to **skip this step** there is a public FunctionHub repository available with 5 necessary functions. The repository can be found in Cloudstash.io under the name “ServerlessToDoListApi-repo”)._
 
 ## Functions preparation
 Fetch the source code of the lambda functions. Visit the [GitHub repository](https://github.com/iaas-splab/todo-api-nodejs) and download the files.
@@ -24,109 +24,109 @@ Fetch the source code of the lambda functions. Visit the [GitHub repository](htt
 - update
   
 ### Tasks
-- Create a user in Cloudstash.io and log in (Make sure to store the provided **deploy_token**).
-- Create a new public/private repository in Cloudstash.io
+- Create a user in [Cloudstash.io](https://cloudstash.io/) and log in (Make sure to store the provided **deploy_token**).
+- Create a new public/private repository in [Cloudstash.io](https://cloudstash.io/).
 - Install [FunctionHub-cli](https://pypi.org/project/functionhub/) using your terminal.
 -   Create a project for each function `fuhub  create  <project_name>` and populate all the config.ini files with the right properties:
 
  <details>
       <summary>Create</summary>
 
-```
-[REPOSITORY]
-org = <your_cloudstash_user>
-repository = <your_functions_repository>
-  
-[FUNCTION]
-name = create
-version = 1.0.0
-description = create an item
-  
-[RUNTIME]
-provider = aws
-runtime = js
-handler = create.handler
-```
+        ```
+        [REPOSITORY]
+        org = <your_cloudstash_user>
+        repository = <your_functions_repository>
+        
+        [FUNCTION]
+        name = create
+        version = 1.0.0
+        description = create an item
+        
+        [RUNTIME]
+        provider = aws
+        runtime = js
+        handler = create.handler
+        ```
 
 </details>
 <details>
       <summary>Delete</summary>
 
- ```
-[REPOSITORY]
-org = <your_cloudstash_user>
-repository = <your_functions_repository>
-  
-[FUNCTION]
-name = delete
-version = 1.0.0
-description = delete an item
-  
-[RUNTIME]
-provider = aws
-runtime = js
-handler = delete.handler
-```
+        ```
+        [REPOSITORY]
+        org = <your_cloudstash_user>
+        repository = <your_functions_repository>
+        
+        [FUNCTION]
+        name = delete
+        version = 1.0.0
+        description = delete an item
+        
+        [RUNTIME]
+        provider = aws
+        runtime = js
+        handler = delete.handler
+        ```
 
 </details>
 <details>
       <summary>Get</summary>
 
- ```
-[REPOSITORY]
-org = <your_cloudstash_user>
-repository = <your_functions_repository>
-  
-[FUNCTION]
-name = get
-version = 1.0.0
-description = get items
-  
-[RUNTIME]
-provider = aws
-runtime = js
-handler = get.handler
-```
+        ```
+        [REPOSITORY]
+        org = <your_cloudstash_user>
+        repository = <your_functions_repository>
+        
+        [FUNCTION]
+        name = get
+        version = 1.0.0
+        description = get items
+        
+        [RUNTIME]
+        provider = aws
+        runtime = js
+        handler = get.handler
+        ```
 
 </details>
 <details>
       <summary>List</summary>
 
- ```
-[REPOSITORY]
-org = <your_cloudstash_user>
-repository = <your_functions_repository>
-  
-[FUNCTION]
-name = list
-version = 1.0.0
-description = list items
-  
-[RUNTIME]
-provider = aws
-runtime = js
-handler = list.handler
-```
+        ```
+        [REPOSITORY]
+        org = <your_cloudstash_user>
+        repository = <your_functions_repository>
+        
+        [FUNCTION]
+        name = list
+        version = 1.0.0
+        description = list items
+        
+        [RUNTIME]
+        provider = aws
+        runtime = js
+        handler = list.handler
+        ```
 
 </details>
 <details>
       <summary>Update</summary>
 
- ```
-[REPOSITORY]
-org = <your_cloudstash_user>
-repository = <your_functions_repository>
-  
-[FUNCTION]
-name = update
-version = 1.0.0
-description = update an item
-  
-[RUNTIME]
-provider = aws
-runtime = js
-handler = update.handler
-```
+        ```
+        [REPOSITORY]
+        org = <your_cloudstash_user>
+        repository = <your_functions_repository>
+        
+        [FUNCTION]
+        name = update
+        version = 1.0.0
+        description = update an item
+        
+        [RUNTIME]
+        provider = aws
+        runtime = js
+        handler = update.handler
+        ```
 
 </details>
 
@@ -136,7 +136,10 @@ handler = update.handler
 
 ![](img/FH-fuhub_upload.png)
 
-After uploading all the functions with FunctionHub-cli, the listing of functions and the function details will be as following:
+After uploading all the functions with FunctionHub-cli, the listing of functions  will be as following:
 
 ![](img/FH-list_artifacts.png)
+
+The function details of the "create" function can be seen in the following image where the user can either retrieve artifact details such as "artifactId" and "handler" or simply download the function locally.
+
 ![](img/FH-artifact_details.png)

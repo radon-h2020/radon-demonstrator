@@ -33,7 +33,7 @@ following prerequisites:
 13. [Deploying artifacts to FunctionHub](labs/functionhub.md)
 
 ## RADON workflow
-![RADON workflow diagram](img/RADON-workflow.png)
+![RADON workflow diagram](labs/img/RADON-workflow.png)
 
 
 ## Directory
