@@ -139,12 +139,10 @@ handler = update.handler
 -  ZIP the source code and store it in the same direcotry as the config.ini file.
 -  Upload the functions executing : `fuhub --token <deploy_token> upload <zipped_function>`
 
-<img src="img/FH-fuhub_upload.png" height="20">
-<img src="img/FH-fuhub_upload.png" height="30">
-<img src="img/FH-fuhub_upload.png" height="40">
-<img src="img/FH-fuhub_upload.png" height="50">
-<img src="img/FH-fuhub_upload.png" height="60">
+<img src="img/FH-fuhub_upload.png" height="80">
+<img src="img/FH-fuhub_upload.png" height="90">
 <img src="img/FH-fuhub_upload.png" height="100">
+
 
 
 
