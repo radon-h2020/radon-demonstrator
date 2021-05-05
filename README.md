@@ -32,6 +32,9 @@ following prerequisites:
 12. [Enabling CI/CD](labs/cicd.md)
 13. [Deploying artifacts to FunctionHub](labs/functionhub.md)
 
+## RADON workflow
+![RADON workflow diagram](img/RADON-workflow.png)
+
 
 ## Directory
 
