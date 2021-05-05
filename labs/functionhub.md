@@ -10,7 +10,7 @@ All the functions handling the back-end of the "SeverlessToDoListAPI" applicatio
 FunctionHub will provide access to them by a URL that we can later attach as a reference to the lambda’s “artifacts” property in GMT.
 
   
-#### _Note_
+##### _Note_
 _If you wish to **skip this step** there is a public FunctionHub repository available with 5 necessary functions. The repository can be found in Cloudstash.io under the name “ServerlessToDoListApi-repo”)._
 
 ## Functions preparation
@@ -32,101 +32,106 @@ Fetch the source code of the lambda functions. Visit the [GitHub repository](htt
  <details>
       <summary>Create</summary>
 
-        ```
-        [REPOSITORY]
-        org = <your_cloudstash_user>
-        repository = <your_functions_repository>
-        
-        [FUNCTION]
-        name = create
-        version = 1.0.0
-        description = create an item
-        
-        [RUNTIME]
-        provider = aws
-        runtime = js
-        handler = create.handler
-        ```
+```
+
+[REPOSITORY]
+org = <your_cloudstash_user>
+repository = <your_functions_repository>
+
+[FUNCTION]
+name = create
+version = 1.0.0
+description = create an item
+
+[RUNTIME]
+provider = aws
+runtime = js
+handler = create.handler
+```
 
 </details>
 <details>
       <summary>Delete</summary>
 
-        ```
-        [REPOSITORY]
-        org = <your_cloudstash_user>
-        repository = <your_functions_repository>
-        
-        [FUNCTION]
-        name = delete
-        version = 1.0.0
-        description = delete an item
-        
-        [RUNTIME]
-        provider = aws
-        runtime = js
-        handler = delete.handler
-        ```
+```
+
+[REPOSITORY]
+org = <your_cloudstash_user>
+repository = <your_functions_repository>
+
+[FUNCTION]
+name = delete
+version = 1.0.0
+description = delete an item
+
+[RUNTIME]
+provider = aws
+runtime = js
+handler = delete.handler
+```
 
 </details>
 <details>
       <summary>Get</summary>
 
-        ```
-        [REPOSITORY]
-        org = <your_cloudstash_user>
-        repository = <your_functions_repository>
-        
-        [FUNCTION]
-        name = get
-        version = 1.0.0
-        description = get items
-        
-        [RUNTIME]
-        provider = aws
-        runtime = js
-        handler = get.handler
-        ```
+```
+
+[REPOSITORY]
+org = <your_cloudstash_user>
+repository = <your_functions_repository>
+
+[FUNCTION]
+name = get
+version = 1.0.0
+description = get items
+
+[RUNTIME]
+provider = aws
+runtime = js
+handler = get.handler
+```
 
 </details>
 <details>
       <summary>List</summary>
 
-        ```
-        [REPOSITORY]
-        org = <your_cloudstash_user>
-        repository = <your_functions_repository>
-        
-        [FUNCTION]
-        name = list
-        version = 1.0.0
-        description = list items
-        
-        [RUNTIME]
-        provider = aws
-        runtime = js
-        handler = list.handler
-        ```
+```
+
+[REPOSITORY]
+org = <your_cloudstash_user>
+repository = <your_functions_repository>
+
+[FUNCTION]
+name = list
+version = 1.0.0
+description = list items
+
+[RUNTIME]
+provider = aws
+runtime = js
+handler = list.handler
+```
 
 </details>
 <details>
       <summary>Update</summary>
 
-        ```
-        [REPOSITORY]
-        org = <your_cloudstash_user>
-        repository = <your_functions_repository>
-        
-        [FUNCTION]
-        name = update
-        version = 1.0.0
-        description = update an item
-        
-        [RUNTIME]
-        provider = aws
-        runtime = js
-        handler = update.handler
-        ```
+```
+
+[REPOSITORY]
+org = <your_cloudstash_user>
+repository = <your_functions_repository>
+
+[FUNCTION]
+name = update
+version = 1.0.0
+description = update an item
+
+[RUNTIME]
+provider = aws
+runtime = js
+handler = update.handler
+```
 
 </details>
 
@@ -134,7 +139,14 @@ Fetch the source code of the lambda functions. Visit the [GitHub repository](htt
 -  ZIP the source code and store it in the same direcotry as the config.ini file.
 -  Upload the functions executing : `fuhub --token <deploy_token> upload <zipped_function>`
 
-![](img/FH-fuhub_upload.png)
+<img src="img/FH-fuhub_upload.png" height="20">
+<img src="img/FH-fuhub_upload.png" height="30">
+<img src="img/FH-fuhub_upload.png" height="40">
+<img src="img/FH-fuhub_upload.png" height="50">
+<img src="img/FH-fuhub_upload.png" height="60">
+<img src="img/FH-fuhub_upload.png" height="100">
+
+
 
 After uploading all the functions with FunctionHub-cli, the listing of functions  will be as following:
 
