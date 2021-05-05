@@ -140,11 +140,6 @@ handler = update.handler
 -  Upload the functions executing : `fuhub --token <deploy_token> upload <zipped_function>`
 
 <img src="img/FH-fuhub_upload.png" height="80">
-<img src="img/FH-fuhub_upload.png" height="90">
-<img src="img/FH-fuhub_upload.png" height="100">
-
-
-
 
 After uploading all the functions with FunctionHub-cli, the listing of functions  will be as following:
 
