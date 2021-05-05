@@ -11,7 +11,7 @@ FunctionHub will provide access to them by a URL that we can later attach as a r
 
   
 ##### _Note_
-_If you wish to **skip this step** there is a public FunctionHub repository available with 5 necessary functions. The repository can be found in Cloudstash.io under the name “ServerlessToDoListApi-repo”)._
+_If you wish to **skip this step** move to [GMT](gmt.md). A public FunctionHub repository is already available with all the necessary functions. The repository can be found in Cloudstash.io under the name “ServerlessToDoListApi-repo”)._
 
 ## Functions preparation
 Fetch the source code of the lambda functions. Visit the [GitHub repository](https://github.com/iaas-splab/todo-api-nodejs) and download the files.
@@ -141,6 +141,8 @@ handler = update.handler
 
 <img src="img/FH-fuhub_upload.png" height="80">
 
+## Outcome
+
 After uploading all the functions with FunctionHub-cli, the listing of functions  will be as following:
 
 ![](img/FH-list_artifacts.png)
@@ -148,3 +150,8 @@ After uploading all the functions with FunctionHub-cli, the listing of functions
 The function details of the "create" function can be seen in the following image where the user can either retrieve artifact details such as "artifactId" and "handler" or simply download the function locally.
 
 ![](img/FH-artifact_details.png)
+
+## Next step
+
+Head over to [GMT](gmt.md) section to model your appliation.
+

@@ -73,4 +73,4 @@ with the framework as well.
 
 ## Next step
 
-Head over to [GMT](gmt.md) section to model your appliation.
+Head over to [Function Hub](functionhub.md) section to prepare the source code packages for the application.
