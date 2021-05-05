@@ -35,6 +35,8 @@ following prerequisites:
 ## RADON workflow
 ![RADON workflow diagram](labs/img/RADON-workflow.png)
 
+<img src="labs/img/RADON-workflow.png" width="100" height="100">
+
 
 ## Directory
 
