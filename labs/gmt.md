@@ -217,8 +217,6 @@ The animation below shows how to use GMT to create such relationships.
 
 ![](img/4-ModelRelationships.gif)
 
-In the end
-
 ### Tasks
 
 - For all nodes besides `AwsPlatform`, they should have a requirement relationship from their `HostedOn` to the formers `host` capability.
