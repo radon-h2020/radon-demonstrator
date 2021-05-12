@@ -190,7 +190,7 @@ properties:
 
 ---
 
-## Attaching the code
+## Attaching the Code
 
 All the function nodes require source code attached to be useful.
 On the tab `Artifacts`, the artifacts that accompany the lambda function can be attached either by uploading a file or by referencing a URL from [FunctionHub](functionhub.md).
@@ -208,7 +208,7 @@ On the tab `Artifacts`, the artifacts that accompany the lambda function can be 
 
 ---
 
-## Node relationships
+## Node Relationships
 
 All nodes have some capabilities they offer and some requirements they need from others.
 
@@ -276,7 +276,7 @@ The animation below shows how to use GMT to create such relationships.
 
 ---
 
-## Finishing up
+## Finishing Up
 
 At the end of this, you should have a project looking something like this:
 
@@ -284,12 +284,12 @@ At the end of this, you should have a project looking something like this:
 
 ---
 
-## If something fails
+## If Something Fails
 
 If you got stuck, the example application has already been modelled in the service templates section called `ServerlessToDoListAPI`.
 
 ---
 
-## Next step
+## Next Step
 
 Head over to [xOpera](xopera.md) section to deploy your model.
