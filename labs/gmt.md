@@ -198,7 +198,7 @@ On the tab `Artifacts`, the artifacts that accompany the lambda function can be 
 ### Tasks
 
 - Activate the `Artifacts` view for the canvas.
-- On each AWS Lambda node, attach an artifact of the type `zip` with the following url for each:
+- On each AWS Lambda node, attach an artifact of the type `zip` with the following URL for each:
   - Get: `http://cloudstash.io/artifact_download/1cea0130441318a22cee6904ea971a`
   - Create: `http://cloudstash.io/artifact_download/36f24b63abeb3a7f70a1f1ca42077e`
   - List: `http://cloudstash.io/artifact_download/9f9fd845ed2f3b061136179467ba5f`
@@ -272,7 +272,7 @@ The animation below shows how to use GMT to create such relationships.
     ```
 
     </details>
-- When done, click save, and your model is done.
+- When done, click `Save`, and your model is ready to be deployed.
 
 ---
 
@@ -286,7 +286,7 @@ At the end of this, you should have a project looking something like this:
 
 ## If something fails
 
-If you got stuck, the example application has already been modelled in the service templates section called `ServerlessToDoListAPITestingExample`.
+If you got stuck, the example application has already been modelled in the service templates section called `ServerlessToDoListAPI`.
 
 ---
 
