@@ -41,8 +41,13 @@ a model that looks similar to this one:
 ### Tasks
 
 - Open up GMT in the right hand side of the IDE
+  ![](img/open-GMT.png)
 - Create a new Service Template
   ![](img/GMT-add-model.png)
+  You may use whichever Namespace you want to store your 
+  new service template (eg. "your_organization.servicetemplates") 
+  or use the same as projected (eg. "example.org.tosca.servicetemplates")
+  Using your own Namespace you can keep all your service templates in the same place.
 - Give it a name (eg. "serverless-todo") and click
   add
 - Click on the Topology Template tab, and click
@@ -96,7 +101,7 @@ properties:
 ```
 displayName: "AwsApiGateway"
 properties:
-  api_title: "ServerlessToDoListAPI"
+  name: "ServerlessToDoListAPI"
   api_version: "1.0.0"
   api_description: "a simple serverless API example"
 ```
@@ -125,7 +130,7 @@ displayName: "GetTodoItem"
 properties:
   handler: "get.handler"
   name: "get-todo"
-  runtime: "nodejs10.x"
+  runtime: "nodejs12.x"
   statement_id: "get-stmt"
   zip_file: "1cea0130441318a22cee6904ea971a"
   env_vars: {"TODOS_TABLE":"items"}
@@ -140,7 +145,7 @@ displayName: "CreateTodoItem"
 properties:
   handler: "create.handler"
   name: "create-item"
-  runtime: "nodejs10.x"
+  runtime: "nodejs12.x"
   statement_id: "create-stmt"
   zip_file: "36f24b63abeb3a7f70a1f1ca42077e"
   env_vars: {"TODOS_TABLE":"items"}
@@ -154,9 +159,9 @@ properties:
   displayName: "ListTodoItem"
       properties:
         handler: "list.handler"
-        name: "list-todos"
-        runtime: "nodejs10.x"
-        statement_id: "list-statement"
+        name: "list-item"
+        runtime: "nodejs12.x"
+        statement_id: "list-stmt"
         zip_file: "9f9fd845ed2f3b061136179467ba5f"
         env_vars: {"TODOS_TABLE":"items"}
 ```
@@ -170,7 +175,7 @@ properties:
       properties:
         handler: "update.handler"
         name: "update-item"
-        runtime: "nodejs10.x"
+        runtime: "nodejs12.x"
         statement_id: "update-stmt"
         zip_file: "0b2516f89dbd44dc1bd03712e81db7"
         env_vars: {"TODOS_TABLE":"items"}
@@ -185,7 +190,7 @@ properties:
       properties:
         handler: "delete.handler"
         name: "delete-item"
-        runtime: "nodejs10.x"
+        runtime: "nodejs12.x"
         statement_id: "delete-stmt"
         zip_file: "07714624b3dd0c78502024164411a7"
         env_vars: {"TODOS_TABLE":"items"}
@@ -316,6 +321,8 @@ If you got stuck, the example application has
 already been modelled in the service templates
 section called
 `ServerlessToDoListAPITestingExample`.
+
+The TOSCA file of the above service template can be found [here](servicetemplates/ServiceTemplate.tosca)
 
 ## Next step
 
