@@ -96,7 +96,7 @@ properties:
 ```
 displayName: "AwsApiGateway"
 properties:
-  api_title: "ServerlessToDoListAPI"
+  name: "ServerlessToDoListAPI"
   api_version: "1.0.0"
   api_description: "a simple serverless API example"
 ```
