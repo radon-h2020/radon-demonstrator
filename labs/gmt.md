@@ -125,7 +125,7 @@ displayName: "GetTodoItem"
 properties:
   handler: "get.handler"
   name: "get-todo"
-  runtime: "nodejs10.x"
+  runtime: "nodejs12.x"
   statement_id: "get-stmt"
   zip_file: "1cea0130441318a22cee6904ea971a"
   env_vars: {"TODOS_TABLE":"items"}
@@ -140,7 +140,7 @@ displayName: "CreateTodoItem"
 properties:
   handler: "create.handler"
   name: "create-item"
-  runtime: "nodejs10.x"
+  runtime: "nodejs12.x"
   statement_id: "create-stmt"
   zip_file: "36f24b63abeb3a7f70a1f1ca42077e"
   env_vars: {"TODOS_TABLE":"items"}
@@ -154,9 +154,9 @@ properties:
   displayName: "ListTodoItem"
       properties:
         handler: "list.handler"
-        name: "list-todos"
-        runtime: "nodejs10.x"
-        statement_id: "list-statement"
+        name: "list-item"
+        runtime: "nodejs12.x"
+        statement_id: "list-stmt"
         zip_file: "9f9fd845ed2f3b061136179467ba5f"
         env_vars: {"TODOS_TABLE":"items"}
 ```
@@ -170,7 +170,7 @@ properties:
       properties:
         handler: "update.handler"
         name: "update-item"
-        runtime: "nodejs10.x"
+        runtime: "nodejs12.x"
         statement_id: "update-stmt"
         zip_file: "0b2516f89dbd44dc1bd03712e81db7"
         env_vars: {"TODOS_TABLE":"items"}
@@ -185,7 +185,7 @@ properties:
       properties:
         handler: "delete.handler"
         name: "delete-item"
-        runtime: "nodejs10.x"
+        runtime: "nodejs12.x"
         statement_id: "delete-stmt"
         zip_file: "07714624b3dd0c78502024164411a7"
         env_vars: {"TODOS_TABLE":"items"}
@@ -316,6 +316,8 @@ If you got stuck, the example application has
 already been modelled in the service templates
 section called
 `ServerlessToDoListAPITestingExample`.
+
+The TOSCA file of the above service template can be found [here](servicetemplates/ServiceTemplate.tosca)
 
 ## Next step
 
