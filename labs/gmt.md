@@ -283,6 +283,19 @@ At the end of this, you should have a project looking something like this:
 
 ![](img/application-GMT2.png)
 
+From here, you may create a TOSCA CSAR of the modeled application.
+
+Cloud Service Archive (CSAR) files are TOSCA’s exchange format.
+A CSAR is essentially a ZIP archive following a certain directory layout and contains all necessary files and templates to execute the deployment of the modeled application.
+
+### Tasks
+
+- Go back to the TOSCA Management UI and open the Service Templates view.
+- Search for your service template and open it.
+- In the service template detail view, you may may click on `Export` and `Export to IDE` to output the generated file to the RADON IDE.
+- Go back to the RADON IDE.
+  You'll find the generated CSAR in the project folder `radon-csars` (e.g., `ServerlessToDoListAPITestingExample.csar`).
+
 ---
 
 ## If Something Fails
@@ -295,4 +308,5 @@ The TOSCA file of the above service template can be found [here](servicetemplate
 
 ## Next Step
 
+The generated CSAR is self-contained as it contains all type definitions, implementation and deployment artifacts as well as the TOSCA service template itself to deploy the application by a TOSCA-compliant orchestrator.
 Head over to [xOpera](xopera.md) section to deploy your model.
