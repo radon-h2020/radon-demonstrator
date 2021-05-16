@@ -192,7 +192,8 @@ Opera SaaS steps:
     on your local machine on
     /root/.aws/credentials. Example below...
 
-```[default]
+```
+[default]
 aws_access_key_id = <secret>
 aws_secret_access_key = <secret>
 ```

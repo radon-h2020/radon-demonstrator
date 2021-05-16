@@ -49,7 +49,7 @@ mode):
 
 ![](img/IDE-layout.png)
 
-Now you are ready to clone down the project code.
+Now you are ready to clone down the project code. (Skip this step if you are using the pre-packaged source code from Function Hub)
 
 - Click terminal and
   `Open terminal in specific container` use the
