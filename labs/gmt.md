@@ -41,8 +41,13 @@ a model that looks similar to this one:
 ### Tasks
 
 - Open up GMT in the right hand side of the IDE
+  ![](img/open-GMT.png)
 - Create a new Service Template
   ![](img/GMT-add-model.png)
+  You may use whichever Namespace you want to store your 
+  new service template (eg. "your_organization.servicetemplates") 
+  or use the same as projected (eg. "example.org.tosca.servicetemplates")
+  Using your own Namespace you can keep all your service templates in the same place.
 - Give it a name (eg. "serverless-todo") and click
   add
 - Click on the Topology Template tab, and click
