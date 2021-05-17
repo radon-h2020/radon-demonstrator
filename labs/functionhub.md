@@ -16,7 +16,7 @@ _If you wish to **skip this step** move to [GMT](gmt.md). A public FunctionHub r
 ## Functions preparation
 Fetch the source code of the lambda functions. Visit the [GitHub repository](https://github.com/iaas-splab/todo-api-nodejs) and download the files.
 
-5 lambda functions are needed for the "ServerlessToDoListAPI" applciation:
+5 lambda functions are needed for the "ServerlessToDoListAPI" application:
 - create
 - delete
 - get
@@ -153,5 +153,5 @@ The function details of the "create" function can be seen in the following image
 
 ## Next step
 
-Head over to [GMT](gmt.md) section to model your appliation.
+Head over to [GMT](gmt.md) section to model your application.
 
