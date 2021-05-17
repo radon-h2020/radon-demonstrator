@@ -1,64 +1,53 @@
 
-## Graphical Modeling Tool
+# Graphical Modeling Tool
 
-Taken from the
-[documentation](https://radon-ide.readthedocs.io/en/latest/):
+Taken from the [documentation](https://radon-ide.readthedocs.io/en/latest/):
 
-> It enables the users to create, develop, and
-> model TOSCA service templates (i.e. RADON
-> models), representing the applications that are
-> deployed using the RADON Orchestrator. The GMT
-> is able to interact with files and folders from
-> the “modeling project” inside the underlying Che
-> workspace. It offers also the feature to package
-> and save a CSAR of a selected RADON Model to the
-> workspace in order to give the possibility to
-> process it using other RADON tools or deploy it
-> using the RADON Orchestrator.
+> It enables the users to create, develop, and model TOSCA service templates (i.e., RADON models), representing the applications that will be deployed using the RADON Orchestrator.
+> The GMT is able to interact with files and folders from RADON IDE's "modeling-project".
+> It offers also the feature to create and export a TOSCA CSAR file of a selected RADON Model to the Eclipse Che workspace to process it using other RADON tools or deploy it using the RADON Orchestrator.
 
-All the nodes represent different entities for
-that provider, being cloud provider or tool
-specifics.
+You use the tool as an usability layer on top to maintain your TOSCA files in a graphical and intuitive user interface.
+The graphical web-editor can be used to represent the different nodes, and their dependencies, that should be deployed using RADON's TOSCA orchestrator.
+Thereby, GMT stores all TOSCA entities in a defined folder structure, which is accessible through the RADON IDE (modeling-project).
 
-All the necessary nodes can be found under the
-namespace “radon.nodes.aws” at the palette In the
-case of AWS, all the entities we need is present:
+The example application is based on AWS and different modeling entities used for the AWS cloud provider.
 
-- Api gateway
+All the necessary nodes can be found under the namespace `radon.nodes.aws` at the palette on the left.
+In our example, all the entities we need are available:
+
+- API Gateway
 - Lambda functions
-- DynamoDB
+- DynamoDB table
 - AWS Platform
 
-In the picture below, you can see how
+The animation below shows how to model the different nodes:
 
 ![](img/2-ModelNodeTemplates.gif)
 
-After running the rest of this lab, you will have
-a model that looks similar to this one:
+After running the rest of this lab exercise, you will have a model that looks similar to this one:
 
 ![](img/application-GMT2.png)
 
+---
+
+## Create a new Service Template
+
 ### Tasks
 
-- Open up GMT in the right hand side of the IDE
+- Open GMT from the workspaces tab on the right-hand side of the RADON IDE (`radon-gmt` button):
   ![](img/open-GMT.png)
-- Create a new Service Template
+- Create a new TOSCA Service Template, as shown in the screenshot below:
   ![](img/GMT-add-model.png)
-  You may use whichever Namespace you want to store your 
-  new service template (eg. "your_organization.servicetemplates") 
-  or use the same as projected (eg. "example.org.tosca.servicetemplates")
-  Using your own Namespace you can keep all your service templates in the same place.
-- Give it a name (eg. "serverless-todo") and click
-  add
-- Click on the Topology Template tab, and click
-  the `open editor` button.
+  You may use whichever namespace you want to store your new service template (e.g., `your_organization.servicetemplates`) or use the same as projected (e.g., `example.org.tosca.servicetemplates`).
+  Using your own namespace you can keep all your service templates in the same place.
+- Give it a name (e.g., `serverless-todo`) and click `Add`.
+- In the new view, click on the `Topology Template` tab, and click `Open Editor`.  
 
 ## Node Types
 
-All the necessary nodes can be found under the
-namespace “radon.nodes.aws” at the palette. The
-ServerlessToDoListAPI application consists of the
-following node types:
+All the necessary TOSCA node types can be found under the namespace `radon.nodes.aws` at the palette.
+The ServerlessToDoListAPI application consists of the following node types:
 
 - 1 AwsApiGateway
 - 5 AwsLambdaFunction
@@ -67,24 +56,22 @@ following node types:
 
 ### Tasks
 
-- Model all the different nodes we need by
-  dragging them into the canvas from the left pane
+- Model all the different nodes we need by dragging them into the canvas from the left pane
+
+---
 
 ## Node Properties
 
-Having the nodes without specific properties will
-not help us much, so we need to input the right
-configuration for this to work. On the tab
-properties we populate the different properties.
-GMT provides a real time error detection to
-prevent the user from filing false entries.
+Having the nodes without specific properties will not help us much, so we need to input the correct configuration for this to work.
+By selecting a node, the edit pane can be used to populate the different properties.
+GMT provides a real time error detection to prevent the user from filing false entries.
 
 ### Tasks
 
-Populate all the nodes with the right properties:
+Populate all the nodes with the correct properties:
 
 <details>
-      <summary>AwsPlatform</summary>
+  <summary>AwsPlatform</summary>
 
 ```
 displayName: "AwsPlatform"
@@ -96,7 +83,7 @@ properties:
 </details>
 
 <details>
-      <summary>AwsAPIGateway</summary>
+  <summary>AwsAPIGateway</summary>
 
 ```
 displayName: "AwsApiGateway"
@@ -109,7 +96,7 @@ properties:
 </details>
 
 <details>
-      <summary>AwsDynamoDBTable</summary>
+  <summary>AwsDynamoDBTable</summary>
 
 ```
 displayName: "ItemsTable"
@@ -122,8 +109,9 @@ properties:
 ```
 
 </details>
+
 <details>
-      <summary>AwsLambdaFunction (get)</summary>
+  <summary>AwsLambdaFunction (get)</summary>
 
 ```
 displayName: "GetTodoItem"
@@ -138,7 +126,7 @@ properties:
 
 </details>
 <details>
-      <summary>AwsLambdaFunction (Create)</summary>
+  <summary>AwsLambdaFunction (Create)</summary>
 
 ```
 displayName: "CreateTodoItem"
@@ -152,8 +140,9 @@ properties:
 ```
 
 </details>
+
 <details>
-      <summary>AwsLambdaFunction (list)</summary>
+  <summary>AwsLambdaFunction (list)</summary>
 
 ```
   displayName: "ListTodoItem"
@@ -167,8 +156,9 @@ properties:
 ```
 
 </details>
+
 <details>
-      <summary>AwsLambdaFunction (update)</summary>
+  <summary>AwsLambdaFunction (update)</summary>
 
 ```
      displayName: "UpdateTodoItem"
@@ -182,8 +172,9 @@ properties:
 ```
 
 </details>
+
 <details>
-      <summary>AwsLambdaFunction (delete)</summary>
+  <summary>AwsLambdaFunction (delete)</summary>
 
 ```
   displayName: "DeleteTodoItem"
@@ -198,133 +189,124 @@ properties:
 
 </details>
 
-## Attaching the code
+---
 
-All the function nodes require source code attached to be
-useful. On the tab “Artifacts”, the artifacts
-that accompany the lambda function can be attached
-either by uploading a file or by referencing a URL
-from [FunctionHub](functionhub.md).
+## Attaching the Code
+
+All the function nodes require source code attached to be useful.
+On the tab `Artifacts`, the artifacts that accompany the lambda function can be attached either by uploading a file or by referencing a URL from [FunctionHub](functionhub.md).
 
 ### Tasks
 
-- Select the `artifacts` view for the canvas.
-- On each Lambda node, attach an artifact of the
-  type `zip` with the following url for each
+- Activate the `Artifacts` view for the canvas.
+- On each AWS Lambda node, attach an artifact of the type `zip` with the following URL for each:
+  - Get: `http://cloudstash.io/artifact_download/1cea0130441318a22cee6904ea971a`
+  - Create: `http://cloudstash.io/artifact_download/36f24b63abeb3a7f70a1f1ca42077e`
+  - List: `http://cloudstash.io/artifact_download/9f9fd845ed2f3b061136179467ba5f`
+  - Update: `http://cloudstash.io/artifact_download/0b2516f89dbd44dc1bd03712e81db7`
+  - Delete `http://cloudstash.io/artifact_download/07714624b3dd0c78502024164411a7`
+- Under properties for each node, make sure that the value corresponds with the value after `/artifact_download` in the url above.
 
-  - Get:
-    `http://cloudstash.io/artifact_download/1cea0130441318a22cee6904ea971a`
-  - Create:
-    `http://cloudstash.io/artifact_download/36f24b63abeb3a7f70a1f1ca42077e`
-  - List:
-    `http://cloudstash.io/artifact_download/9f9fd845ed2f3b061136179467ba5f`
-  - Update:
-    `http://cloudstash.io/artifact_download/0b2516f89dbd44dc1bd03712e81db7`
-  - Delete
-    `http://cloudstash.io/artifact_download/07714624b3dd0c78502024164411a7`
+---
 
-- Under properties for each node, make sure that
-  the value corresponds with the value after
-  `/artifact_download` in the url above
+## Node Relationships
 
-## Node relationships
+All nodes have some capabilities they offer and some requirements they need from others.
 
-All nodes have some capabilities they offer and
-some requirements they need from others.
-
-As an example the requirement of the
-AwsLambdaFunction node “HostedOn” has to be
-matched with the capability of AwsPlatform node
-“Host”.
+As an example the requirement of the AwsLambdaFunction node `HostedOn` has to be matched with the capability of AwsPlatform node `host`.
+The animation below shows how to use GMT to create such relationships.
 
 ![](img/4-ModelRelationships.gif)
 
-In the end
-
 ### Tasks
 
-- For all nodes besides `AwsPlatform`, they should
-  have a requirement relationship from their
-  `HostedOn` to the formers `Host` capability.
-- For all Lambda functions, the requirement of
-  `ConnectsTo` has to be matched with the
-  capability of the DynamoDBTable node `Database`.
-- `AwsApiGateway` needs to have a requirement
-  relationship of `Invoker` to all lambda
-  functions capability `Invokable`.
-  - For all of the five relationships, some
-    properties needs to be attached, listed below:
-
- <details>
+- For all nodes besides `AwsPlatform`, they should have a requirement relationship from their `HostedOn` to the formers `host` capability.
+- For all Lambda functions, the requirement of `ConnectsTo` has to be matched with the capability of the DynamoDBTable node `database_endpoint`.
+- `AwsApiGateway` needs to have a requirement relationship of `Invoker` to all Lambda functions capability `Invokable`.
+  - For all of the five relationships, some properties needs to be attached, listed below:
+    <details>
       <summary>Get</summary>
 
-```
-properties:
-  endpoint: "/todos/{id}"
-  http_methods: "get"
-```
-
-</details>
-<details>
+    ```
+    properties:
+      endpoint: "/todos/{id}"
+      http_methods: "get"
+    ```
+    </details>
+    <details>
       <summary>Create</summary>
 
-```
-properties:
-  endpoint: "/todos"
-  http_methods: "post"
-```
+    ```
+    properties:
+      endpoint: "/todos"
+      http_methods: "post"
+    ```
 
-</details>
-<details>
+    </details>
+    <details>
       <summary>List</summary>
 
-```
-properties:
-  endpoint: "/todos"
-  http_methods: "get"
-```
+    ```
+    properties:
+      endpoint: "/todos"
+      http_methods: "get"
+    ```
 
-</details>
-<details>
+    </details>
+    <details>
       <summary>Update</summary>
 
-```
-properties:
-  endpoint: "/todos/{id}"
-  http_methods: "put"
-```
+    ```
+    properties:
+      endpoint: "/todos/{id}"
+      http_methods: "put"
+    ```
 
-</details>
-<details>
+    </details>
+    <details>
       <summary>Delete</summary>
 
-```
-properties:
-  endpoint: "/todos/{id}"
-  http_methods: "delete"
-```
+    ```
+    properties:
+      endpoint: "/todos/{id}"
+      http_methods: "delete"
+    ```
 
-</details>
+    </details>
+- When done, click `Save`, and your model is ready to be deployed.
 
-- When done, click save, and your model is done
+---
 
-## Finishing up
+## Finishing Up
 
-At the end of this, you should have a project
-looking something like this:
+At the end of this, you should have a project looking something like this:
 
 ![](img/application-GMT2.png)
 
-## If something fails
+From here, you may create a TOSCA CSAR of the modeled application.
 
-If you got stuck, the example application has
-already been modelled in the service templates
-section called
-`ServerlessToDoListAPITestingExample`.
+Cloud Service Archive (CSAR) files are TOSCA’s exchange format.
+A CSAR is essentially a ZIP archive following a certain directory layout and contains all necessary files and templates to execute the deployment of the modeled application.
 
-The TOSCA file of the above service template can be found [here](servicetemplates/ServiceTemplate.tosca)
+### Tasks
 
-## Next step
+- Go back to the TOSCA Management UI and open the Service Templates view.
+- Search for your service template and open it.
+- In the service template detail view, you may may click on `Export` and `Export to IDE` to output the generated file to the RADON IDE.
+- Go back to the RADON IDE.
+  You'll find the generated CSAR in the project folder `radon-csars` (e.g., `ServerlessToDoListAPITestingExample.csar`).
 
-Head over to [xOpera](xopera.md) section to deploy
-your model.
+---
+
+## If Something Fails
+
+If you got stuck, the example application has already been modelled in the service templates section called `ServerlessToDoListAPITestingExample`.
+
+The TOSCA file of the above service template can be found [here](servicetemplates/ServiceTemplate.tosca).
+
+---
+
+## Next Step
+
+The generated CSAR is self-contained as it contains all type definitions, implementation and deployment artifacts as well as the TOSCA service template itself to deploy the application by a TOSCA-compliant orchestrator.
+Head over to [xOpera](xopera.md) section to deploy your model.
