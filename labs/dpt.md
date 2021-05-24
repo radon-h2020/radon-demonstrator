@@ -1,3 +1,5 @@
+# Defuse: the IaC Defect Prediction Tool within RADON
+
 Defuse analyzes the characteristics of IaC blueprints to predict their defect-proneness.
 Its models can be used within the RADON IDE, via a dedicated plugin, or in Continuous Integration pipelines.
 The tool's output consists of TOSCA and Ansible files metrics along with hints on the blueprints to investigate.
