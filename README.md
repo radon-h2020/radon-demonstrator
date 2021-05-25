@@ -27,7 +27,7 @@ following prerequisites:
 7. [Adding Data pipelines](labs/datapipelines.md)
 8. [Adding monitoring with Prometheus & Grafana](labs/monitoring.md)
 9. [Adding verification constraints with VT](labs/vt.md)
-10. [Detect code defects with DPT](labs/dpt.md)
+10. [Detect code defects with Defuse](labs/dpt.md)
 11. [Choose optimal decomposition with DT](labs/dt.md)
 12. [Storing deployment templates in Template Library](labs/templatelibrary.md)
 13. [Enabling CI/CD](labs/cicd.md)
