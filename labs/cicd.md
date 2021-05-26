@@ -15,7 +15,13 @@ CI/CD builds in Jenkins can be triggered manually by the user using the CI/CD pl
 ![](img/CICD-configureCI.png)
 
 A new yaml file will be generated named after your csar file with the prefix **CI_config_**. The configuration file requires a set of information in order to source the project and build it.
-![](img/CICD-configuration_file.png)
+<img src="img/CICD-configuration_file.png" height="80">
+<img src="img/CICD-configuration_file.png" height="120">
+<img src="img/CICD-configuration_file.png" height="150">
+<img src="img/CICD-configuration_file.png" height="200">
+<img src="img/CICD-configuration_file.png" height="250">
+<img src="img/CICD-configuration_file.png" height="300">
+<img src="img/CICD-configuration_file.png" height="350">
 
 - Fill up the CI_config yaml file info as following:
 	<details>
