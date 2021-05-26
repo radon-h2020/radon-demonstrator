@@ -40,5 +40,7 @@ A new yaml file will be generated named after your csar file with the prefix **C
 	
 ## Outcome
 After triggering the pipeline from the IDE, the job is being built in the Jenkins environment providing execution logs to the user.
-![](img/CICD-builds.png)
+
+<img src="img/CICD-builds.png" height="500">
+
 
