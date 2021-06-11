@@ -204,6 +204,5 @@ In Listing 3, you can find an exemplary CTT configuration file named ctt_config.
         -v, --verbose Be verbose
         -h, --help Print this help
 
-        % ./ctt_cli.py -u "http://localhost:18080/RadonCTT" -c ctt_config.yaml                                                    
-
+        % ./ctt_cli.py -u "http://localhost:18080/RadonCTT" -c ctt_config.yaml
 > Listing 4: Usage and invocation of the CTT CLI Tool
