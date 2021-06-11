@@ -7,7 +7,7 @@ that executes the defined tests against the SUT. After the deployment
 has succeeded, the defined test is executed and the results are
 obtained. Tests and test-related information are defined in the TOSCA
 models of the SUT and TI. The complete functionality of the tool is
-described in the CTT documentation[^1].
+described in the CTT documentation (https://continuous-testing-tool.readthedocs.io/en/latest/).
 
 In this usage description, we go through the test of the
 "ServerlessToDoListAPI" and an endpoint test that makes sure that the
@@ -23,7 +23,7 @@ AWS EC2 SSH Key Name, AWS VPC Subnet ID.
 
 The concrete steps are as follows:
 
-### Preparing the Workspace with Credentials
+### 1. Preparing the Workspace with Credentials
 
  In order to use CTT in the context of the RADON IDE, some credentials
  need to be provided when the workspace is created. The said
@@ -58,7 +58,7 @@ The concrete steps are as follows:
 
 Once these variables are set, the workspace can be created.
 
-### 1. Attaching a Test Policy to the "Serverless ToDoList"
+### 2. Attaching a Test Policy to the "Serverless ToDoList"
 
  In order to assign the required information for testing an application
  (named "system under test" or abbreviated as "SUT" ) with CTT, first a
@@ -78,7 +78,7 @@ Once these variables are set, the workspace can be created.
  properties, as seen in Figure 1.
 
  ![](img/87341b0de1de121342975dea76193a8292abec75.png)
- **Figure 1**: Screenshot of Test Policy Property Dialog
+ > **Figure 1**: Screenshot of Test Policy Property Dialog
 
  In the following, only the fields required for the current scenario
  will be covered.
@@ -106,9 +106,9 @@ Once these variables are set, the workspace can be created.
  checkbox under the "Is Activated?" label as depicted in Figure 2.
 
  ![](img/789a3d824dc76aa14f6faad821cea06954db57d0.png)
- **Figure 2**: Screenshot of Test Policy Activation
+ > **Figure 2**: Screenshot of Test Policy Activation
 
-### Configuring the Test Scenario
+### 3. Configuring the Test Scenario
 
  Once the workspace is started and completely loaded, we create a new
  directory that holds all files that are needed to execute CTT. In this
@@ -124,7 +124,6 @@ Once these variables are set, the workspace can be created.
         ssh_key_name: "awsec2"
         ssh_key_file: "/tmp/aws-ec2"
         ...                                                                  |
-
 > **Listing 2**: Exemplary inputs.yaml file
 
 
@@ -153,26 +152,22 @@ In Listing 3, you can find an exemplary CTT configuration file named ctt_config.
             "test_id": "test_1",
             "result_destination_path": "serverless-test-results.zip"
         }
-
-
 > **Listing 3**: Exemplary ctt_config.yaml file
 
  Please note that the folder property is currently named repository_url
  for historical reasons. In the future, this property will be renamed.
 
-![](img/08a65bbac9e037502c47530f04d207de766ccce9.png)
+ ![](img/08a65bbac9e037502c47530f04d207de766ccce9.png)
+ > Figure 19: ServerlessToDoListAPI scenario in the RADON IDE
 
-Figure 19: ServerlessToDoListAPI scenario in the RADON IDE
-
-### Executing CTT (using the RADON IDE)
+### 4. Executing CTT (using the RADON IDE)
 
  After all preparations are finished, you can right-click on the
  ctt_config.yaml file and choose the option RadonCTT: Execute test
  configuration.
 
  ![](img/8623c23b82d4ec83a9b64647d1976d7a046d2e2b.png)
-
- Figure 20: Progress log in the output panel
+ > Figure 20: Progress log in the output panel
 
  The progress can be seen in the output panel (see Figure 20) and a
  progress bar appears on the lower right. Depending on the underlying
@@ -180,7 +175,7 @@ Figure 19: ServerlessToDoListAPI scenario in the RADON IDE
  finished. Once the process is finished, you find the results in a
  ZIP-file located where you specified the result_destination_path.
 
-### Executing CTT (using the CTT CLI Tool)
+### 5. Executing CTT (using the CTT CLI Tool)
 
  In addition to the possibility to execute CTT from within the RADON
  IDE, we also provide a command-line tool called the "CTT CLI Tool"
