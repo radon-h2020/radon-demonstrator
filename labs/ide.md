@@ -14,7 +14,7 @@ any software on their local system.
 
 ## The IDE
 
-The RADON IDE will have all the tools needed to
+The RADON IDE integrates the tools needed to
 develop, model, orchestrate and deploy serverless
 functions, through its various components shown in
 the picture below:
@@ -35,12 +35,12 @@ of your choice.
 - In the dashboard select `Get Started` tab and
   then `Custom Workspace`.
 - Copy the URL of the
-  [RADON Devfile available here](https://raw.githubusercontent.com/radon-h2020/radon-ide/master/devfiles/radon/v0.0.4/devfile.yaml)
+  [RADON Devfile available here](https://raw.githubusercontent.com/radon-h2020/radon-ide/master/devfiles/radon/latest/devfile.yaml)
   and paste it in the field URL of devfile under
   Devfile section.
 - Set the Storage Type to `ephemeral`
 - Then click on `Load devfile`
-- once the RADON devfile has been loaded click on
+- Once the RADON devfile has been loaded click on
   the `Create & Open button`
 
 After the workspace have been created you will be
