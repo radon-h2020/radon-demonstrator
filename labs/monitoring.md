@@ -1,7 +1,8 @@
 # Monitoring Tool
 
 
-The Monitoring Tool offers the capability to monitor serverless functions and obtain monitoring metrics through the automatic creation of personalized, user-proprietary Monitoring dashboards. This is feasible by the deployment of a Push Gateway node and the definition of an AWSISMonitoredBy relationship, provided by the Monitoring tool.
+> The Monitoring Tool offers the capability to monitor serverless functions and obtain monitoring metrics through the automatic creation of personalized, user-proprietary Monitoring dashboards. This is feasible by the deployment of a Push Gateway node and the definition of an AWSISMonitoredBy relationship, provided by the Monitoring tool.
+
 
 # Overview
 
