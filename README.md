@@ -1,4 +1,4 @@
-# RADON workshop
+# RADON Demonstrator (training)
 
 ## Overview
 
@@ -16,7 +16,7 @@ following prerequisites:
 - A user on the
   [Eclipse Che environment](http://che-che.51.11.43.6.nip.io/).
 
-## Workshop labs
+## Training labs
 
 1. [Introduction to the application and RADON](labs/introduction.md)
 2. [Working with the IDE](labs/ide.md)
