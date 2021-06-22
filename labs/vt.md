@@ -20,18 +20,19 @@ documentation](https://radon-vt-documentation.readthedocs.io/en/latest/).
 
 
 For the purposes of this tutorial, a simple set of constraints have been
-created in the CDL file [main.cdl](TODO). The constraints state that if
-a lambda function accesses sensitive data (where the nodes which contain
-sensitive data are given in the CDL specification), then it should be
-hosted on the same AwsPlatform as the data. In this simple case, the
-constraints mean that the resource components in the model have to be
-hosted on the same AwsPlatform. `ServerlessToDoListAPI` has been
-implemented as such, so when we invoke the verification test importing
-the service template of the created application, no consistencies are
-found as expected. After importing this file into the IDE workspace, the
-VT can be invoked choosing the option "Verify" by right clicking on the
-CDL file. The image below shows the structure of the CDL file along with
-the output of the verification test on the bottom.
+created in the CDL file [main.cdl](servicetemplates/main.cdl). The
+constraints state that if a lambda function accesses sensitive data
+(where the nodes which contain sensitive data are given in the CDL
+specification), then it should be hosted on the same AwsPlatform as the
+data. In this simple case, the constraints mean that the resource
+components in the model have to be hosted on the same AwsPlatform.
+`ServerlessToDoListAPI` has been implemented as such, so when we invoke
+the verification test importing the service template of the created
+application, no consistencies are found as expected. After importing
+this file into the IDE workspace, the VT can be invoked choosing the
+option "Verify" by right clicking on the CDL file. The image below shows
+the structure of the CDL file along with the output of the verification
+test on the bottom.
 
 ![](img/VT1.png)
 
