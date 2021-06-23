@@ -1,0 +1,37 @@
+import "demonstrator_files/modified/_definitions/radonblueprints__ServerlessToDoListAPI.tosca";
+
+types = {
+  radon.nodes.aws.AwsLambdaFunction,
+  radon.nodes.aws.AwsPlatform,
+  radon.nodes.aws.AwsDynamoDBTable,
+  radon.nodes.aws.AwsApiGateway,
+  radon.nodes.aws.AwsS3Bucket
+};
+
+$X.host_node := $X.requirements[$Y].host.node;
+lambdas      ::= $N : $N.type = radon.nodes.aws.AwsLambdaFunction;
+
+sensitive_data = { AwsDynamoDBTable_0 };
+
+AwsLambdaFunction_0.endpoints = { AwsDynamoDBTable_0 };
+AwsLambdaFunction_1.endpoints = { AwsDynamoDBTable_0 };
+AwsLambdaFunction_2.endpoints = { AwsDynamoDBTable_0 };
+AwsLambdaFunction_3.endpoints = { AwsDynamoDBTable_0 };
+AwsLambdaFunction_4.endpoints = { AwsDynamoDBTable_0 };
+
+
+INCONSISTENCY sensitive_data_issue {
+  lambda <- lambdas;
+  sensitive_node <- lambda.endpoints;
+  sensitive_node <- sensitive_data;
+  ASSERT((lambda.host_node != sensitive_node.host_node));
+};
+
+@show lambda;
+@show sensitive_node;
+
+# Space of possible corrections
+
+platforms = { AwsPlatform_0, AwsPlatform_1 };
+
+@definable $X.host.node, platforms;
