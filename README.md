@@ -5,7 +5,7 @@
 This repository contains workshop labs and best
 practices for tools in the RADON framework
 toolstack.
-It is recommended for new users of the RADON framework to follow the **labs 1-4 as a basic training**. For more advanced usage follow the labs 5-13 according to interest. 
+It is recommended for new users of the RADON framework to follow the **labs 1-4 as a basic training**. For more advanced usage follow the labs 5-13 according to interest.
 
 ## Prerequisites
 
@@ -27,7 +27,7 @@ following prerequisites:
 7. [Detect code defects with Defuse](labs/dpt.md)
 8. [Adding Data pipelines](labs/datapipelines.md)
 9. [Adding verification constraints with VT](labs/vt.md)
-10. [Choose optimal decomposition with DT](labs/dt.md)
+10. [Finding optimal deployment with the Decomposition Tool (DT)](labs/dt.md)
 11. [Adding monitoring with Prometheus & Grafana](labs/monitoring.md)
 12. [Storing deployment templates in Template Library](labs/templatelibrary.md)
 13. [Enabling CI/CD](labs/cicd.md)
