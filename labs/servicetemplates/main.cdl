@@ -1,4 +1,4 @@
-import "demonstrator_files/modified/_definitions/radonblueprints__ServerlessToDoListAPI.tosca";
+import "ServiceTemplate.tosca";
 
 types = {
   radon.nodes.aws.AwsLambdaFunction,
