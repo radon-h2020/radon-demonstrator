@@ -24,7 +24,7 @@ following prerequisites:
 4. [Modeling the application with GMT](labs/gmt.md)
 5. [Deploying the csar with xOpera](labs/xopera.md)
 6. [Testing your Application with the Continuous Testing Tool (CTT)](labs/ctt.md)
-7. [Detect code defects with Defuse](labs/dpt.md)
+7. [Detecting code defects with Defuse](labs/dpt.md)
 8. [Adding Data pipelines](labs/datapipelines.md)
 9. [Adding verification constraints with VT](labs/vt.md)
 10. [Finding optimal deployment with the Decomposition Tool (DT)](labs/dt.md)
